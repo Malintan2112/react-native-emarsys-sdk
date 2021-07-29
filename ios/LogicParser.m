@@ -12,7 +12,10 @@
 +(EMSLogic *)parseLogic:(NSString *)logic {
     EMSLogic *recommendedLogic;
     
-    if([logic isEqualToString:@"CART"]) {
+    if([logic isEqualToString:@"SEARCH"]) {
+        recommendedLogic = EMSLogic.search;
+    }
+    else if([logic isEqualToString:@"CART"]) {
         recommendedLogic = EMSLogic.cart;
     }
     else if([logic isEqualToString:@"RELATED"]) {
